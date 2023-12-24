@@ -41,19 +41,24 @@ class _HomePageState extends State<HomePage> {
                           
                         Padding(
                           padding: const EdgeInsets.only(top: 47,left: 30,right: 30),
-                          child: TextFormField(
-                            
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.zero,
-                              hintText: "What are you looking for?",
-                              hintStyle: TextStyle(color: Colors.grey),
-                              prefixIcon: Icon(Icons.search,color: Colors.grey,),
-                              fillColor: Colors.white,
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(70),
-                                borderSide: BorderSide.none
+                          child: Container(
+                            height: 40,
+                            child: TextFormField(
+                              
+                              keyboardType: TextInputType.text,
+                              style: TextStyle( height: 1, fontSize: 12),
+                              decoration: InputDecoration(
+                                  
+                                contentPadding: EdgeInsets.zero,
+                                hintText: "What are you looking for?",
+                                hintStyle: TextStyle(color: Colors.grey),
+                                prefixIcon: Icon(Icons.search,color: Colors.grey,),
+                                fillColor: Colors.white,
+                                filled: true,
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(70),
+                                  borderSide: BorderSide.none
+                                ),
                               ),
                             ),
                           ),
@@ -119,14 +124,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 SizedBox(height: 10),
-              //  SizedBox(
-              //   height: 250,
-              //      child: ListView.builder(
-              //       itemCount: 5,
-              //       itemBuilder: (context, index) {
-              //         return buildCard(index);
-              //       }),
-              //  )
+              
              SizedBox(
                   height: 100,
                   child: ListView.builder(
