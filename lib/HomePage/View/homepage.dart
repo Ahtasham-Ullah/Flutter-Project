@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'product.dart';
+//import 'package:flutter_application_1/HomePage/View/product.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,11 +12,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-   List<Map<String, String>> imageData = [
-  {'imagePath': 'assets/images/image1.jpg', 'title': 'Image 1 Title'},
-  {'imagePath': 'assets/images/image2.png', 'title': 'Image 2 Title'},
+
+
   
-];
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -117,6 +118,7 @@ class _HomePageState extends State<HomePage> {
                       Icon(Icons.arrow_back_sharp,color: Colors.grey,)
                   ],
                 ),
+                SizedBox(height: 10),
               //  SizedBox(
               //   height: 250,
               //      child: ListView.builder(
@@ -126,20 +128,31 @@ class _HomePageState extends State<HomePage> {
               //       }),
               //  )
              SizedBox(
-                  height: 200,
+                  height: 150,
                   child: ListView.builder(
-                     // shrinkWrap: true,
+                      //shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
                        
-                      itemCount: 6,
-                      itemBuilder: (context, index) {
+                      itemCount: Categories.length,
+                      itemBuilder: (context,  index) {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            height: 100,
-                            width: 100,
+                            height: 89,
+                            width: 64,
+                             child: Column(
+                              children: [
+                                CircleAvatar(
+                                  radius: 25,
+                                  backgroundImage: AssetImage(
+                                    
+                                    Categories[index].images
+                                  ),
+                                ),
+                                Text(Categories[index].name,style: TextStyle(fontSize: 10), textAlign:TextAlign.center ,)
+                              ],
+                             ),
                             
-                            color: Colors.black,
                           ),
                         );
                       }),
