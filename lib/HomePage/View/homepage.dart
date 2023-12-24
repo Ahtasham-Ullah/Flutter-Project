@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               SizedBox(width: 5,),
                               CircleAvatar(
-                                backgroundColor: Colors.white,
+                                backgroundColor: Colors.red,
                                 radius: 4,
                               ),
                               SizedBox(width: 5,),
