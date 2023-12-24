@@ -196,15 +196,19 @@ class _HomePageState extends State<HomePage> {
                             height: 275,
                             width: 180,
                             decoration: BoxDecoration(
-                              color: Colors.grey,
+                              //color: Colors.grey,
                               borderRadius: BorderRadius.circular(5),
-                              
+                              border: Border.all(
+                                width: .5,
+                                color: Colors.grey,
+
+                              )
                             ),
                              child: Column(
                               children: [
                                  Padding(
                                    padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
-                                   bottom: 100),
+                                   bottom: 10),
                                    child: SizedBox(
                                     
                                      child: Image(image: AssetImage(
@@ -212,6 +216,24 @@ class _HomePageState extends State<HomePage> {
                                      ),
                                      fit: BoxFit.cover,),
                                    ),
+                                 ),
+                                 Title(color: Colors.black, child: Text(
+                                  Products[index].detail,
+                                  style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+                                 )),
+                                 Row(
+                                   children: [
+                                    SizedBox(width: 20,),
+                                    Text(
+                                      Products[index].price,
+                                      style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.green),
+                                     ), 
+                                     SizedBox(width: 20,),
+                                     Text(
+                                      Products[index].Oldprice,
+                                      style: TextStyle(fontSize: 10),
+                                     ), 
+                                   ],
                                  )
                               ],
                              ),

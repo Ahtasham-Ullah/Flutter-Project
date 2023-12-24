@@ -42,9 +42,9 @@ Categorie1("Electronics  & \n Appliances", "assets/images/Rectangle 11@3x.png"),
  }
 
  List <Product> Products=[
-  Product("Huawei Talk band B3 Lite \n - Blue Watch", "assets/images/Image 5.png", "AED 49.50","AED 49.50"),
-  Product("Huawei Talk band B3 Lite \n- Blue Watch", "assets/images/Image 5@3x (1).png", "AED 49.50","AED 49.50"),
-   Product("Huawei Talk band B3 Lite \n - Blue Watch", "assets/images/Image 5.png", "AED 49.50","AED 49.50"),
-  Product("Huawei Talk band B3 Lite \n- Blue Watch", "assets/images/Image 5@3x (1).png", "AED 49.50","AED 49.50"),
+  Product("Huawei Talk band B4 Lite \n - Blue Watch", "assets/images/Image 5.png", "AED 49.50","AED 59.50"),
+  Product("Huawei Talk band B3 Lite \n- Blue Watch", "assets/images/Image 5@3x (1).png", "AED 49.50","AED 59.50"),
+   Product("Huawei Talk band B4 Lite \n - Blue Watch", "assets/images/Image 5.png", "AED 49.50","AED 59.50"),
+  Product("Huawei Talk band B3 Lite \n- Blue Watch", "assets/images/Image 5@3x (1).png", "AED 49.50","AED 59.50"),
   
  ];
