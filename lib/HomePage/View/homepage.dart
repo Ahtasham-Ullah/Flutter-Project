@@ -128,17 +128,17 @@ class _HomePageState extends State<HomePage> {
               //       }),
               //  )
              SizedBox(
-                  height: 150,
+                  height: 100,
                   child: ListView.builder(
-                      //shrinkWrap: true,
+                      
                       scrollDirection: Axis.horizontal,
                        
                       itemCount: Categories.length,
                       itemBuilder: (context,  index) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Container(
-                            height: 89,
+                            height: 59,
                             width: 64,
                              child: Column(
                               children: [
@@ -158,6 +158,74 @@ class _HomePageState extends State<HomePage> {
                       }),
              ),
              
+             ///Flash Sale
+              Container(
+                
+                
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                      children: [
+                        Text("Flash Sale",
+                        style:TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600) ,),
+                        SizedBox(width: 170,),
+                        Text("See All",
+                        style:TextStyle(
+                          fontSize: 14,
+                         color: Colors.grey,
+                          fontWeight: FontWeight.w500) ,),
+                          SizedBox(width: 5,),
+                          Icon(Icons.arrow_back_sharp,color: Colors.grey,),
+                          
+                      ],
+                    ),
+                ),
+              ),
+
+              SizedBox(
+                            height: 275,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Products.length,
+                              itemBuilder:  (context, index) {
+                                    return Padding(
+                          padding: const EdgeInsets.only(left: 20,top: 20),
+                          child: Container(
+                            height: 275,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              color: Colors.grey,
+                              borderRadius: BorderRadius.circular(5),
+                              
+                            ),
+                             child: Column(
+                              children: [
+                                 Padding(
+                                   padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
+                                   bottom: 100),
+                                   child: SizedBox(
+                                    
+                                     child: Image(image: AssetImage(
+                                      Products[index].image
+                                     ),
+                                     fit: BoxFit.cover,),
+                                   ),
+                                 )
+                              ],
+                             ),
+                            
+                          ),
+                        );
+
+
+                              }
+                              
+                              
+                              
+                              ),
+                          )
                           
               ],
          
@@ -167,11 +235,6 @@ class _HomePageState extends State<HomePage> {
        ),
     );
 
-    // ignore: dead_code
-    // Widget buildCard(int index) =>Container(
-    //   height: 150,
-    //   width: 150,
-    //   color: Colors.amber,
-    // );
+   
   }
 }
