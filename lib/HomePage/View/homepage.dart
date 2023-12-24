@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                 ),
               ),
-
+               /// product list
               SizedBox(
                             height: 275,
                             child: ListView.builder(
@@ -309,7 +309,211 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                )          
+                )  ,
+                //SizedBox(height: 30,), 
+                Padding(
+                  padding: const EdgeInsets.only(top: 30,left: 20,
+                  right: 20,bottom: 30),
+                  child: Container(
+                    height: 84,
+                    width: 335,
+                    child: Image(image: AssetImage("assets/images/Image 1@3x.png")),
+                  ),
+                ),
+                 Container(
+                
+                
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                      children: [
+                        Text("Featured Discount",
+                        style:TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600) ,),
+                        SizedBox(width: 120,),
+                        Text("See All",
+                        style:TextStyle(
+                          fontSize: 14,
+                         color: Colors.grey,
+                          fontWeight: FontWeight.w500) ,),
+                          SizedBox(width: 5,),
+                          Icon(Icons.arrow_forward,color: Colors.grey,),
+                          
+                      ],
+                    ),
+                ),
+              ),
+                SizedBox(height: 20,),
+                   //product list
+                   SizedBox(
+                            height: 275,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Products.length,
+                              itemBuilder:  (context, index) {
+                                    return Padding(
+                          padding: const EdgeInsets.only(left: 20,top: 20),
+                          child: Container(
+                            height: 275,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              //color: Colors.grey,
+                              borderRadius: BorderRadius.circular(5),
+                              border: Border.all(
+                                width: .5,
+                                color: Colors.grey,
+
+                              )
+                            ),
+                             child: Column(
+                              children: [
+                                 Padding(
+                                   padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
+                                   bottom: 10),
+                                   child: SizedBox(
+                                    
+                                     child: Image(image: AssetImage(
+                                      Products[index].image
+                                     ),
+                                     fit: BoxFit.cover,),
+                                   ),
+                                 ),
+                                 Title(color: Colors.black, child: Text(
+                                  Products[index].detail,
+                                  style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+                                 )),
+                                 Row(
+                                   children: [
+                                    
+                                    SizedBox(width: 20,),
+                                    Text(
+                                      Products[index].price,
+                                      style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.green),
+                                     ), 
+                                     SizedBox(width: 20,),
+                                     Text(
+                                      Products[index].Oldprice,
+                                      style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Colors.red,
+                                      decoration: TextDecoration.lineThrough,decorationColor: Colors.red),
+                                     ), 
+                                   ],
+                                 )
+                              ],
+                             ),
+                            
+                          ),
+                        );
+
+
+                              }
+                              
+                              
+                              
+                              ),
+                          ),//list of product
+                           Padding(
+                  padding: const EdgeInsets.only(top: 30,left: 20,
+                  right: 20,bottom: 30),
+                  child: Container(
+                    height: 84,
+                    width: 335,
+                    child: Image(image: AssetImage("assets/images/Image 2@3x.png")),
+                  ),
+                ),
+                Container(
+                
+                
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                      children: [
+                        Text("Featured Discount",
+                        style:TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600) ,),
+                        SizedBox(width: 120,),
+                        Text("See All",
+                        style:TextStyle(
+                          fontSize: 14,
+                         color: Colors.grey,
+                          fontWeight: FontWeight.w500) ,),
+                          SizedBox(width: 5,),
+                          Icon(Icons.arrow_forward,color: Colors.grey,),
+                          
+                      ],
+                    ),
+                ),
+              ),
+
+              SizedBox(height: 20,),
+              
+               SizedBox(
+                            height: 275,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Products.length,
+                              itemBuilder:  (context, index) {
+                                    return Padding(
+                          padding: const EdgeInsets.only(left: 20,top: 20),
+                          child: Container(
+                            height: 275,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              //color: Colors.grey,
+                              borderRadius: BorderRadius.circular(5),
+                              border: Border.all(
+                                width: .5,
+                                color: Colors.grey,
+
+                              )
+                            ),
+                             child: Column(
+                              children: [
+                                 Padding(
+                                   padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
+                                   bottom: 10),
+                                   child: SizedBox(
+                                    
+                                     child: Image(image: AssetImage(
+                                      Products[index].image
+                                     ),
+                                     fit: BoxFit.cover,),
+                                   ),
+                                 ),
+                                 Title(color: Colors.black, child: Text(
+                                  Products[index].detail,
+                                  style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+                                 )),
+                                 Row(
+                                   children: [
+                                    
+                                    SizedBox(width: 20,),
+                                    Text(
+                                      Products[index].price,
+                                      style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.green),
+                                     ), 
+                                     SizedBox(width: 20,),
+                                     Text(
+                                      Products[index].Oldprice,
+                                      style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Colors.red,
+                                      decoration: TextDecoration.lineThrough,decorationColor: Colors.red),
+                                     ), 
+                                   ],
+                                 )
+                              ],
+                             ),
+                            
+                          ),
+                        );
+
+
+                              }
+                              
+                              
+                              
+                              ),
+                          ),
               ],//main children
          
               
