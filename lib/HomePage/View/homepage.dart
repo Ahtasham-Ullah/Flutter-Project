@@ -170,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                         style:TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600) ,),
-                        SizedBox(width: 170,),
+                        SizedBox(width: 175,),
                         Text("See All",
                         style:TextStyle(
                           fontSize: 14,
@@ -223,6 +223,7 @@ class _HomePageState extends State<HomePage> {
                                  )),
                                  Row(
                                    children: [
+                                    
                                     SizedBox(width: 20,),
                                     Text(
                                       Products[index].price,
@@ -231,7 +232,8 @@ class _HomePageState extends State<HomePage> {
                                      SizedBox(width: 20,),
                                      Text(
                                       Products[index].Oldprice,
-                                      style: TextStyle(fontSize: 10),
+                                      style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Colors.red,
+                                      decoration: TextDecoration.lineThrough,decorationColor: Colors.red),
                                      ), 
                                    ],
                                  )
@@ -247,9 +249,68 @@ class _HomePageState extends State<HomePage> {
                               
                               
                               ),
-                          )
+                          ),
+                         SizedBox(height: 30,),
+                     
+                    Container(
+                
+                
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                      children: [
+                        Text("Deals & Discounts",
+                        style:TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600) ,),
+                        SizedBox(width: 120,),
+                        Text("See All",
+                        style:TextStyle(
+                          fontSize: 14,
+                         color: Colors.grey,
+                          fontWeight: FontWeight.w500) ,),
+                          SizedBox(width: 5,),
+                          Icon(Icons.arrow_forward,color: Colors.grey,),
                           
-              ],
+                      ],
+                    ),
+                ),
+              ),
+              SizedBox(height: 20,),
+                SizedBox(
+                  height: 90,
+                  width: 375,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      SizedBox(width: 20,),
+                      Container(
+                      height: 90,
+                      width: 180,  
+                      child: Image.asset("assets/images/Rectangle 20@3x.png",fit: BoxFit.cover,),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                      height: 90,
+                      width: 180,  
+                      child: Image.asset("assets/images/Rectangle 20@3x (1).png",fit: BoxFit.cover,),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                      height: 90,
+                      width: 180,  
+                      child: Image.asset("assets/images/Rectangle 20@3x.png",fit: BoxFit.cover,),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                      height: 90,
+                      width: 180,  
+                      child: Image.asset("assets/images/Rectangle 20@3x (1).png",fit: BoxFit.cover,),
+                      ),
+                    ],
+                  ),
+                )          
+              ],//main children
          
               
             )
