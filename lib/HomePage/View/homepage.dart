@@ -126,36 +126,40 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 10),
               
-             SizedBox(
-                  height: 100,
-                  child: ListView.builder(
-                      
-                      scrollDirection: Axis.horizontal,
-                       
-                      itemCount: Categories.length,
-                      itemBuilder: (context,  index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            height: 59,
-                            width: 64,
-                             child: Column(
-                              children: [
-                                CircleAvatar(
-                                  
-                                  radius: 25,
-                                  backgroundImage: AssetImage(
+             Padding(
+               padding: const EdgeInsets.only(left: 10),
+               child: SizedBox(
+                    height: 100,
+                    
+                    child: ListView.builder(
+                        
+                        scrollDirection: Axis.horizontal,
+                         
+                        itemCount: Categories.length,
+                        itemBuilder: (context,  index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(left: 10,top: 10,bottom: 10),
+                            child: Container(
+                              height: 59,
+                              width: 64,
+                               child: Column(
+                                children: [
+                                  CircleAvatar(
                                     
-                                    Categories[index].images
+                                    radius: 25,
+                                    backgroundImage: AssetImage(
+                                      
+                                      Categories[index].images
+                                    ),
                                   ),
-                                ),
-                                Text(Categories[index].name,style: TextStyle(fontSize: 10), textAlign:TextAlign.center ,)
-                              ],
-                             ),
-                            
-                          ),
-                        );
-                      }),
+                                  Text(Categories[index].name,style: TextStyle(fontSize: 10), textAlign:TextAlign.center ,)
+                                ],
+                               ),
+                              
+                            ),
+                          );
+                        }),
+               ),
              ),
              
              ///Flash Sale
