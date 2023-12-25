@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'product.dart';
 //import 'package:flutter_application_1/HomePage/View/product.dart';
 
@@ -203,10 +204,11 @@ class _HomePageState extends State<HomePage> {
                               )
                             ),
                              child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                  Padding(
                                    padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
-                                   bottom: 10),
+                                   bottom: 25),
                                    child: SizedBox(
                                     
                                      child: Image(image: AssetImage(
@@ -215,19 +217,50 @@ class _HomePageState extends State<HomePage> {
                                      fit: BoxFit.cover,),
                                    ),
                                  ),
-                                 Title(color: Colors.black, child: Text(
-                                  Products[index].detail,
-                                  style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
-                                 )),
+                                 SizedBox(height: 0,),
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 16),
+                                   child: Title(color: Colors.black, child: Text(
+                                    Products[index].detail,
+                                    style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+                                   )),
+                                 ),
+                                 
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: RatingBar.builder(
+                                      
+                                          initialRating: 4,
+                                          minRating: 1,
+                                          itemSize: 12,
+                                          itemCount: 5,
+                                          direction: Axis.horizontal,
+                                          itemBuilder: (context , _) =>(
+                                            Icon(Icons.star,
+                                            color: Colors.amber,
+                                            )
+                                         
+                                          ), 
+                                          onRatingUpdate: (Rating){
+                                            
+                                          },
+                                         
+                                         ),
+                                  ),
+                             
                                  Row(
                                    children: [
-                                    
-                                    SizedBox(width: 20,),
+                                       //rating bar
+                                      
+                             
+                             
+                             
+                                    SizedBox(width: 17,),
                                     Text(
                                       Products[index].price,
                                       style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.green),
                                      ), 
-                                     SizedBox(width: 20,),
+                                     SizedBox(width: 10,),
                                      Text(
                                       Products[index].Oldprice,
                                       style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Colors.red,
@@ -236,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                                    ],
                                  )
                               ],
-                             ),
+                             ),//column detail
                             
                           ),
                         );
@@ -364,11 +397,12 @@ class _HomePageState extends State<HomePage> {
 
                               )
                             ),
-                             child: Column(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                  Padding(
                                    padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
-                                   bottom: 10),
+                                   bottom: 25),
                                    child: SizedBox(
                                     
                                      child: Image(image: AssetImage(
@@ -377,19 +411,50 @@ class _HomePageState extends State<HomePage> {
                                      fit: BoxFit.cover,),
                                    ),
                                  ),
-                                 Title(color: Colors.black, child: Text(
-                                  Products[index].detail,
-                                  style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
-                                 )),
+                                 SizedBox(height: 0,),
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 16),
+                                   child: Title(color: Colors.black, child: Text(
+                                    Products[index].detail,
+                                    style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+                                   )),
+                                 ),
+                                 
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: RatingBar.builder(
+                                      
+                                          initialRating: 4,
+                                          minRating: 1,
+                                          itemSize: 12,
+                                          itemCount: 5,
+                                          direction: Axis.horizontal,
+                                          itemBuilder: (context , _) =>(
+                                            Icon(Icons.star,
+                                            color: Colors.amber,
+                                            )
+                                         
+                                          ), 
+                                          onRatingUpdate: (Rating){
+                                            
+                                          },
+                                         
+                                         ),
+                                  ),
+                             
                                  Row(
                                    children: [
-                                    
-                                    SizedBox(width: 20,),
+                                       //rating bar
+                                      
+                             
+                             
+                             
+                                    SizedBox(width: 17,),
                                     Text(
                                       Products[index].price,
                                       style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.green),
                                      ), 
-                                     SizedBox(width: 20,),
+                                     SizedBox(width: 10,),
                                      Text(
                                       Products[index].Oldprice,
                                       style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Colors.red,
@@ -398,7 +463,7 @@ class _HomePageState extends State<HomePage> {
                                    ],
                                  )
                               ],
-                             ),
+                             ),//column detail
                             
                           ),
                         );
@@ -466,11 +531,12 @@ class _HomePageState extends State<HomePage> {
 
                               )
                             ),
-                             child: Column(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                  Padding(
                                    padding: const EdgeInsets.only(top: 37,left: 45,right: 45,
-                                   bottom: 10),
+                                   bottom: 25),
                                    child: SizedBox(
                                     
                                      child: Image(image: AssetImage(
@@ -479,19 +545,50 @@ class _HomePageState extends State<HomePage> {
                                      fit: BoxFit.cover,),
                                    ),
                                  ),
-                                 Title(color: Colors.black, child: Text(
-                                  Products[index].detail,
-                                  style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
-                                 )),
+                                 SizedBox(height: 0,),
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 16),
+                                   child: Title(color: Colors.black, child: Text(
+                                    Products[index].detail,
+                                    style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
+                                   )),
+                                 ),
+                                 
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 15),
+                                    child: RatingBar.builder(
+                                      
+                                          initialRating: 4,
+                                          minRating: 1,
+                                          itemSize: 12,
+                                          itemCount: 5,
+                                          direction: Axis.horizontal,
+                                          itemBuilder: (context , _) =>(
+                                            Icon(Icons.star,
+                                            color: Colors.amber,
+                                            )
+                                         
+                                          ), 
+                                          onRatingUpdate: (Rating){
+                                            
+                                          },
+                                         
+                                         ),
+                                  ),
+                             
                                  Row(
                                    children: [
-                                    
-                                    SizedBox(width: 20,),
+                                       //rating bar
+                                      
+                             
+                             
+                             
+                                    SizedBox(width: 17,),
                                     Text(
                                       Products[index].price,
                                       style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.green),
                                      ), 
-                                     SizedBox(width: 20,),
+                                     SizedBox(width: 10,),
                                      Text(
                                       Products[index].Oldprice,
                                       style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Colors.red,
@@ -500,7 +597,7 @@ class _HomePageState extends State<HomePage> {
                                    ],
                                  )
                               ],
-                             ),
+                             ),//column detail
                             
                           ),
                         );
