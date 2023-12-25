@@ -142,6 +142,7 @@ class _HomePageState extends State<HomePage> {
                              child: Column(
                               children: [
                                 CircleAvatar(
+                                  
                                   radius: 25,
                                   backgroundImage: AssetImage(
                                     
