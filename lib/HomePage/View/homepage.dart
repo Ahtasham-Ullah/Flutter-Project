@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'product.dart';
 //import 'package:flutter_application_1/HomePage/View/product.dart';
 
@@ -613,13 +614,46 @@ class _HomePageState extends State<HomePage> {
                               
                               
                               ),
-                          ),
+                        ),
+                
+                      
               ],//main children
          
               
             )
          ),
        ),
+       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        shape: CircleBorder(),
+        child: Image.asset("assets/images/Home@3x.png"),
+        onPressed: (){},
+       
+       //backgroundColor: Colors.blue,
+       ),
+       bottomNavigationBar: NavigationBar(
+        indicatorShape: CircleBorder(),
+        backgroundColor: Colors.white,
+        height: 54,
+        destinations: [
+        NavigationDestination(icon: 
+        Image.asset("assets/images/@3x.png",height: 17,width: 17,), 
+        label: "Categories",),
+         NavigationDestination(icon: 
+        Image.asset("assets/images/@3x.png",height: 17,width: 17,), 
+        label: "Cart",),
+        SizedBox(width: 141,),
+         NavigationDestination(icon: 
+        Image.asset("assets/images/heart@3x.png",height: 17,width: 17), 
+        label: "Wishlist"),
+         NavigationDestination(icon: 
+        Image.asset("assets/images/Ellipse 4@3x.png",height: 17,width: 17), 
+        label: "Profile"),
+       ],)
+        
+      
+       
     );
 
    
